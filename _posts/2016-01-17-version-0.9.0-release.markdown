@@ -15,7 +15,7 @@ While I'm usually online on our [Slack channel](http://slack.redash.io), I'll al
 * [Monday 18/1 20:00-22:00 UTC](http://time.is/2000_18_Jan_2016_in_UTC) (click on the link to see it in your time zone)
 * [Tuesday 19/1 11:00-13:00 UTC](http://time.is/1100_19_Jan_2016_in_UTC)
 
-I will post additional office hours on here and [Twitter account](http://twitter.com/getredash).
+If there will be demand, I will post additional office hours here and on [Twitter](http://twitter.com/getredash).
 
 If anything isn't clear, don't hesitate to reach out over Slack, Google Groups or just leave here a comment. Also "private support" options are available (details TBD).
 
