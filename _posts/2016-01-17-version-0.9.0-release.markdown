@@ -1,0 +1,65 @@
+---
+layout: post
+title:  "Version 0.9.0 Released (New permission system, plot.ly charts and more)"
+date:   2016-01-17 13:38:00
+author: arikfr
+---
+
+This version includes a significant refactor and update of the permissions system (check pull request #724 for details) and some backward incompatible changes (see below). I recommend to be extra cautious when upgrading -- make sure it's not peak hour of usage and that you have a backup.
+
+Also in this version we replaced the HighCharts charting library with Plot.ly's library, as the former wasn't open source.
+
+While I'm usually online on our [Slack channel](http://slack.redash.io), I'll also be available specifically for upgrade questions & help during the following "office hours":
+
+* [Monday 18/1 20:00-22:00 UTC](http://time.is/2000_18_Jan_2016_in_UTC) (click on the link to see it in your time zone)
+* [Tuesday 19/1 11:00-13:00 UTC](http://time.is/1100_19_Jan_2016_in_UTC)
+
+I will post additional office hours on here and [Twitter account](http://twitter.com/getredash).
+
+If anything isn't clear, don't hesitate to reach out over Slack, Google Groups or just leave here a comment. Also "private support" options are available (details TBD).
+
+## Changes since v0.8.3.b1192:
+
+### Features
+
+* #724 New permissions system, with ability to restrict access to certain data sources based on group membership (see pull request for more details). ([@arikfr](http://github.com/arikfr))
+* #687: Replace HighCharts with Plot.ly ([@alonho](http://github.com/alonho))
+* #664 Ability to embed visualizations in external sites ([@akariv](http://github.com/akariv))
+* #753 Show meaningful message when no data sources defined yet ([@arikfr](http://github.com/arikfr))
+* #714 Load schema for MongoDB data source. ([@erans](http://github.com/erans))
+* #711 Update forked query name to "Copy of #XYZ..." ([@alexanderlz](http://github.com/alexanderlz))
+* #710 BigQuery: option to limit amount of MB processed per query ([@ryotarai](http://github.com/ryotarai))
+* #680 Show rows count per table (for supported data sources) ([@alexanderlz](http://github.com/alexanderlz))
+* #746 Option to update a query every 30 days ([@Xangis](http://github.com/Xangis))
+* #631: Alert rearm setting which allows periodic resending of alert messages. ([@blu35ky](http://github.com/blu35ky))
+* #765 Support for HipChat Server ([@nakechi](http://github.com/nakechi))
+* #751 Option to set # of proxies for the ProxyFix ([@arikfr](http://github.com/arikfr))
+* #742 Option to enforce HTTPs at the "Flask level" ([@arikfr](http://github.com/arikfr))
+
+### Fixes
+* #758: Update dashboard after layout change ([@arikfr](http://github.com/arikfr))
+* #757: Fix infinite digest loop in counter visualization ([@arikfr](http://github.com/arikfr))
+* #739: Support for unicode in alert name ([@toyama0919](http://github.com/toyama0919))
+* #725: Google OAuth - support for next param ([@akariv](http://github.com/akariv))
+* #722: Fix: use second y axis for line charts while stacking ([@ninneko](http://github.com/ninneko))
+* #716: Fix #708: dashboard breaks when removing widgets and adding again ([@arikfr](http://github.com/arikfr))
+
+### Other
+* #759: Remove unused client side code ([@arikfr](http://github.com/arikfr))
+* #743: Explicitly add httplib2 to requirements ([@arikfr](http://github.com/arikfr))
+* #741: Upgrade gunicorn version to latest. ([@arikfr](http://github.com/arikfr))
+* #707: Build dependencies during building Docker image ([@ryotarai](http://github.com/ryotarai))
+* #723: Collect metrics on query time & request time ([@arikfr](http://github.com/arikfr))
+
+### Documentation
+* #764: [How to backup & restore re:dash db](http://docs.redash.io/en/latest/misc/backup_restore.html) ([@JohnConnell](http://github.com/JohnConnell))
+* #750: [How to setup SSL using Let's Encrypt SSL certs](http://docs.redash.io/en/latest/misc/letsencrypt.html) ([@JohnConnell](http://github.com/JohnConnell))
+* #691: [Add TreasureData to the list of datasources](http://docs.redash.io/en/latest/datasources.html#treasure-data) ([@VirtualPaul](http://github.com/VirtualPaul))
+
+## Backward Incompatible Changes
+
+The tables property in groups (and feature) was removed. If you used this, please create the relevant datasources when migrating.
+
+## How to upgrade?
+
+See [documentation](http://docs.redash.io/en/latest/upgrade.html).
