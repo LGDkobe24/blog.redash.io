@@ -1,5 +1,5 @@
 name: Re:dash Updates
-description: Updates on the project progress.
+description: Re:dash news and updates.
 meta_description: "Updates, version releases and more."
 
 markdown: redcarpet
@@ -11,5 +11,5 @@ domain_name: 'http://blog.redash.io'
 google_analytics: 'UA-47088186-5'
 
 # Details for the RSS feed generator
-url:            'blog url'
+url: 'http://blog.redash.io'
 author:         'Arik Fraimovich'

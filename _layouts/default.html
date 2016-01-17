@@ -16,6 +16,30 @@
     <!-- Customisation  -->
     <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
 
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@getredash">
+    <meta name="twitter:creator" content="@arikfr">
+    {% if page.title %}
+      <meta name="twitter:title" content="{{ page.title }}">
+    {% else %}
+      <meta name="twitter:title" content="{{ site.title }}">
+    {% endif %}
+    {% if page.url %}
+      <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+    {% endif %}
+    {% if page.description %}
+      <meta name="twitter:description" content="{{ page.description }}">
+    {% else %}
+      <meta name="twitter:description" content="{{ site.description }}">
+    {% endif %}
+    {% if page.image %}
+      <meta name="twitter:image:src" content="{{ page.image }}">
+    {% else %}
+      <meta name="twitter:image:src" content="{{ site.url }}/assets/images/logo_part.png">
+    {% endif %}
+    <!-- Twitter Card: End -->
+
 </head>
 <body class="{% if page.post_class %}{{page.post_class}}{% else %}home-template{% endif %}">
     {{ content }}

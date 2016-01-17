@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Version 0.9.0 Released (New permission system, plot.ly charts and more)"
+description: This version includes a significant refactor and update of the permissions system and some backward incompatible changes (see below). I recommend to be extra cautious when upgrading -- make sure it's not peak hour of usage and that you have a backup.
 date:   2016-01-17 13:38:00
 author: arikfr
 ---
