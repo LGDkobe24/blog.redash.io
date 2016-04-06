@@ -45,7 +45,7 @@ post_class: post-template
             <!-- If we want to display author's name and bio -->
             {% assign author = site.data.authors[page.author] %}
             <figure class="author-image">
-                <a class="img" href="{{ site.baseurl }}" style="background-image: url({{author.avatar}}&s=140)">
+                <a class="img" href="{{ site.baseurl }}" style="background-image: url({{author.avatar}})">
                 <span class="hidden">{{author.name}}'s Picture</span></a>
             </figure>
             <section class="author">

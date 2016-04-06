@@ -43,7 +43,7 @@ about: 'about.html'
         </section>
         <footer class="post-meta">
             {% assign author = site.data.authors[post.author] %}
-                <img class="author-thumb" src="{{author.avatar}}&s=48" alt="Author's profile picture" nopin="nopin" />
+                <img class="author-thumb" src="{{author.avatar}}" alt="Author's profile picture" nopin="nopin" />
                 {{ author.name }}
             {% if post.categories.size > 0 %}
                 {{ post.categories | array_to_sentence_string | prepend: 'on ' }}
