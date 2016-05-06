@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Version 0.10.0 Released (New Design 🎉, Better UX, Shared Dashboards)"
+description: This is a really packed release, that was almost 2 months in the making. The highlight of this release is probably the new design/UX improvements, but also includes:
 date:   2016-05-06 16:10:00
 author: arikfr
 ---
