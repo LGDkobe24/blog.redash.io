@@ -8,7 +8,7 @@ author: arikfr
 
 This version includes a significant refactor and update of the permissions system (check pull request #724 for details) and some backward incompatible changes (see below). I recommend to be extra cautious when upgrading -- make sure it's not peak hour of usage and that you have a backup.
 
-Also in this version we replaced the HighCharts charting library with Plot.ly's library, as the former wasn't open source.
+Also in this version we replaced the HighCharts charting library with plot.ly's library, as the former wasn't open source.
 
 While I'm usually online on our [Slack channel](http://slack.redash.io), I'll also be available specifically for upgrade questions & help during the following "office hours":
 
