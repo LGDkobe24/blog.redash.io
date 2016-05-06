@@ -1,0 +1,35 @@
+---
+layout: post
+title:  "Version 0.10.0 Released (New Design 🎉, Better UX, Shared Dashboards)"
+date:   2016-05-06 16:10:00
+author: arikfr
+---
+
+This is a really packed release, that was almost 2 months in the making. The highlight of this release is probably the new design/UX improvements ([see screenshots](https://github.com/getredash/redash/pull/984)) but also includes:
+
+* Shared/public dashboards: you can now generate a secret link, that allows access to a single dashboard (similar to how shareable links work for Google Docs).
+* Dashboards the user doesn't have access to any of their widgets are no longer shown to him.
+* New admin views to show currently executing queries.
+* DynamoDB support.
+* Better full screen view for dashboards.
+* Ability to receive a password reset link by email.
+* Improvements and fixes to the InfluxDB, TreasureData, Impala, Vertica , Sqlite and MongoDB query runners.
+* Documentation improvements and more.
+
+As always I would like to thank all who contributed to this release: @machira, @gseva, @AntoineAugusti, @tdawber, @groveriffic, @alexanderlz, @tsibley, @erans, @toru-takahashi, @ink-adavison, @ChiragKParmar, @jkatsnelson, @seanauriti, @staritza, @kasajei, @kirikiriyamama and @jeffwidman.
+
+If you want to ask a question, we encourage you to join [the chat](https://gitter.im/getredash/redash) or start a discussion on [Discourse](http://discuss.redash.io).
+
+## Backward Incompatible Changes
+
+We added few more permissions, enabling more granular control over what a user can do. If you're using custom groups and not all of your users are members of the default group, you might need to manually update your group permissions list.
+
+## How to upgrade?
+
+See [documentation](http://docs.redash.io/en/latest/upgrade.html).
+
+## A Small Favor
+
+Help increase awareness to Redash by staring the project on GitHub:
+
+<iframe src="https://ghbtns.com/github-btn.html?user=getredash&amp;repo=redash&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
