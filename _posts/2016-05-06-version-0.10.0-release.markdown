@@ -16,6 +16,8 @@ This is a really packed release, that was almost 2 months in the making. The hig
 * Improvements and fixes to the InfluxDB, TreasureData, Impala, Vertica , Sqlite and MongoDB query runners.
 * Documentation improvements and more.
 
+([Full Change Log](https://github.com/getredash/redash/releases/tag/v0.10.0.b1774))
+
 As always I would like to thank all who contributed to this release: @machira, @gseva, @AntoineAugusti, @tdawber, @groveriffic, @alexanderlz, @tsibley, @erans, @toru-takahashi, @ink-adavison, @ChiragKParmar, @jkatsnelson, @seanauriti, @staritza, @kasajei, @kirikiriyamama and @jeffwidman.
 
 If you want to ask a question, we encourage you to join [the chat](https://gitter.im/getredash/redash) or start a discussion on [Discourse](http://discuss.redash.io).
