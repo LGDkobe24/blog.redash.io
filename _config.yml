@@ -2,7 +2,6 @@ name: Re:dash Updates
 description: Re:dash news and updates.
 meta_description: "Updates, version releases and more."
 
-highlighter: pygments
 logo: true
 paginate: 15
 baseurl: /
