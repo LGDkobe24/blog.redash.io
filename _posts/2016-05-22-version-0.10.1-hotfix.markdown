@@ -1,0 +1,27 @@
+---
+layout: post
+title: "Version 0.10.1 Released (hotfix for a memory usage issue)"
+date: 2016-05-06 10:10:00
+author: arikfr
+---
+
+This is a hotfix for a memory  usage issue: due to a stupid bug, we were not removing some unused objects from Redis, which results in ever increasing memory usage.
+
+This is a backport of [pull request #1064](https://github.com/getredash/redash/pull/1064) from v0.11.0 to v0.10.0. Upgrading to this release will stop the memory usage increase, but if you want to cleanup Redis you can use the following script:
+
+```python
+from redash import redis_connection
+
+if __name__ == '__main__':
+    for k in redis_connection.keys('query_task_tracker:*'):
+        if redis_connection.zscore('query_task_trackers:done', k) is None and redis_connection.zscore('query_task_trackers:waiting', k) is None and redis_connection.zscore('query_task_trackers:in_progress', k) is None:
+            redis_connection.delete(k)
+```
+
+This script is not efficient, but will do the job. Note that it supposed to be run from your Redash directory (usually `/opt/redash/current`) using the `bin/run` utility.
+
+If you want to ask a question, we encourage you to join [the chat](https://gitter.im/getredash/redash) or start a discussion on [Discourse](http://discuss.redash.io).
+
+## How to upgrade?
+
+See [documentation](http://docs.redash.io/en/latest/upgrade.html).
